@@ -10,5 +10,8 @@ The main principle of Bandgap Reference is that the circuit is built with basic 
 Basically we add two quantities with opposite temperature coefficient with proper weighting the resultanting sum quantity exhibits zero temperature coefficient.
 
 ## Block Diagram 
-![}(Schematic & Outputs/BGR_Block_Diagram.PNG)
+![](Schematic%20%26%20Outputs/BGR_Block_Diagram.PNG)
+
+## Schematic 
+![] (Schematic%20%26%20Outputs/
 
