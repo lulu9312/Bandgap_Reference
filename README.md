@@ -12,6 +12,10 @@ Basically we add two quantities with opposite temperature coefficient with prope
 ## Block Diagram 
 ![](Schematic%20%26%20Outputs/BGR_Block_Diagram.PNG)
 
-## Schematic 
-![] (Schematic%20%26%20Outputs/
+## Schematic  
+![](Schematic%20%26%20Outputs/BGR_Schematic.png)
+
+## 
+
+
 
