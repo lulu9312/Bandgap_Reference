@@ -1,0 +1,38 @@
+** sch_path: /home/pranav/xschem/xschem_simulations/BGR_version_1.0.sch
+**.subckt BGR_version_1.0
+V1 net3 GND 3.3
+XM1 net2 net1 V2 GND sky130_fd_pr__nfet_01v8 L=5 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 net1 Vd GND sky130_fd_pr__nfet_01v8 L=5 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net2 net2 net3 net3 sky130_fd_pr__pfet_01v8 L=5 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 net2 net3 net3 sky130_fd_pr__pfet_01v8 L=5 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Vref net2 net3 net3 sky130_fd_pr__pfet_01v8 L=5 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+R1 V2 Vd1 3.6k m=1
+XQ1 GND GND Vd sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2 GND GND Vd1 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ3 GND GND Vd1 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ4 GND GND CTAT sky130_fd_pr__pnp_05v5_W3p40L3p40
+R2 Vref CTAT 84.05k m=1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/pranav/OpenLane/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+ .dc TEMP -40 125 10
+.save all
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
